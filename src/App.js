@@ -1,11 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import { BrowserRouter, Route, Router } from "react-router-dom";
+import Home from "./Pages/Home";
 
 function App() {
   return (
-    <>
-      <h1 className="text-danger">Ecommerce website in react js</h1>
-    </>
+    <BrowserRouter>
+      <Router>
+        <Route path="/" exact={true} Component={<Home />} />
+      </Router>
+    </BrowserRouter>
   );
 }
 
